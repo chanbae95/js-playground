@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+    <script>
+        //문제1
+        //소수 판별 프로그램
+
+        var i = Number(prompt("숫자를 입력해 주세요."));
+        var isPrime = true;
+
+        for(var a = 2; a < i; a++){
+            if(i%a === 0){
+                isPrime = false;
+                break;
+            }
+        }
+
+        if(isPrime === true){
+            console.log(i + "는 소수입니다.");
+        } else if(isPrime === false){
+            console.log(i + "는 소수가 아닙니다.");
+        }
+
+
+
+    </script>
+
+</body>
+</html>
