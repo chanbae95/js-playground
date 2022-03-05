@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+
+
+<body>
+    <!--연습1
+    <input type="text" id="num"><br>
+    <button onclick="runGugudan()">확인</button><br>
+    -->
+
+    <script>
+        //문제1 
+        //예를 들어 2단은 2 곱하기 1 계산후 계산 값을 출력, 2 곱하기 2 계산 후 계산 값을 출력 ... 2곱하기 9까지 반복. 3단은 같은 과정을 반복
+        //프로그램 1: 처음에는 콘솔에 출력하는 프로그램을 작성한다.
+        //프로그램 2: 두번째는 html 화면에 출력하는 프로그램을 작성한다.
+        
+        // var g = "\n";
+        // for(var i = 2; i < 4; i++){
+        //     for(var a = 1; a < 10; a++){
+        //         console.log(i +" * " + a + " = " + i*a);
+        //         document.write(i +" * " + a + " = " + i*a + "<br>");
+
+        //     }
+        // }
+
+
+        //연습1
+        // function runGugudan(){
+        //     var num = document.getElementById("num").value;
+        //     var n = Number(num);
+        //     for(var a = 1; a < 10; a++){
+        //         console.log(n +" * " + a + " = " + n*a);
+        //     }
+        // }
+
+        //문제2
+        var n = Number(prompt("숫자를 입력해 주세요"));
+        if(n < 2 || n > 9){
+            console.log("2이상, 9이하의 값만 입력할 수 있습니다.");
+            document.write("2이상, 9이하의 값만 입력할 수 있습니다.");
+        }else{
+            for(var a = 1; a < 10; a++){
+                console.log(n +" * " + a + " = " + n*a);
+                document.write(n +" * " + a + " = " + n*a + "<br>");
+            }
+        }
+    </script>
+
+</body>
+</html>
