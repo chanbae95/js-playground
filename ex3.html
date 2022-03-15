@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            numbers = {
+                
+                all : [],
+                prime : [],
+                
+                // 소수인지아닌지
+                isPrime : function(number){
+                    for(var i = 2; i < number; i++){
+                        if(number % i == 0){
+                            return false;
+                        }
+                    }
+                    return true;
+                },
+
+                // 소수인 수를 prime에 추가
+                addPrime : function(number){
+                    for(var r = number; r <= number; r++){
+                        if(this.isPrime(number)){
+                            this.prime.push(number);
+                        }
+                    };
+                },
+
+                // 모든 소수 출력
+                getALLPrimes : function(){
+                    for(var e = 2; e < this.all.length - 1; e++){
+                        this.addPrime(e);
+                    }
+
+                    for(var w = 0; w < this.prime.length -1; w ++){
+                        document.write(this.prime[w] + "<br>");
+                    }
+                    
+                },
+
+                // all에 2부터 max_num까지 숫자를 다넣음
+                addAll :function(max_num){
+                    var input = Number(prompt("숫자를 입력해 주세요"));
+                    for(var a = 1; a <= input; a++){
+                        this.all.push(a);
+                    }
+                }
+
+
+
+            }
+
+
+
+
+
+        </script>
+    </body>
+</html>
