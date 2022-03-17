@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var result = [];
+            var length = 9;
+
+            var num1 = [];
+            var num2 = [];
+
+            for(var a = 2; a <= 10; a++){
+                num1.push(a);
+                num2.push(a - 1);
+            }
+
+            for(var i = 0; i < length; i++){
+                for(var b = 0; b < length; b++){
+                    result.push(num1[i] * num2[b] );
+                }
+            }
+
+            for(var i = 0; i < length; i++){
+                document.write(result[i] + "<br>");
+
+            }
+
+        </script>
+    </body>
+</html>
