@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <script>
+            function input(){
+                var inputNum = Number(prompt("구구단 몇단?"));
+                
+                return inputNum;
+            }
+            
+            function calculrate(num){
+                var result = [];
+                for(var i = 1; i <= 9; i++){
+                    result.push(i * num);
+                }
+
+                return result;                
+            }
+
+            function gogodanprint(result){
+                for(var r = 0 ; r <= result.length -1; r ++){
+                    document.write(result[r] + "<br>");
+                }
+            }
+
+            function main(){
+                var gogonum = input();
+                var gogodan = calculrate(gogonum);
+                gogodanprint(gogodan);
+            }
+
+            main();
+
+        </script>
+
+
+    </body>
+</html>
