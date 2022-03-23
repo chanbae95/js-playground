@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        //  예제
+        //  Food(name, energy) 생성자를 만들어 봅시다.
+        //  eat(food) 메소드를 Human() 생성자 안에 추가해 봅시다.
+        //  도너츠 객체를 생성해서 휴먼 객체에게 먹여 봅시다.
+
+        var Human = function (name, hp, power) {
+            this.name = name;
+            this.hp = hp;
+            this.power = power;
+            this.feed = function (food) {
+                this.hp += food.hp
+            };
+        };
+
+        var Food = function (name, hp) {
+            this.name = name;
+            this.hp = hp;
+        };
+
+        var Chan = new Human("chanbae", 100, 10);
+        var apple = new Food("apple", 30);
+        Chan.feed(apple);
+        
+    </script>
+</body>
+
+</html>
