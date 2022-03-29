@@ -1,4 +1,6 @@
 console.log("button js");
+
+
 var readInput = function(){
     var input = document.getElementById('input1');
     console.log(input.value);
@@ -12,3 +14,5 @@ btn2.onclick = readInput;
 var test = document.getElementById("test2");
 test.appendChild(document.createElement('br'));
 test.appendChild(btn2);
+
+
