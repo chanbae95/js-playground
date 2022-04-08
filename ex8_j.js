@@ -1,6 +1,7 @@
 var inputNum;
 var tom;
-var count = 0;
+var count;
+var total;
 
 var cam = function(){
     var inputDate = document.getElementById("inNum");
@@ -9,17 +10,19 @@ var cam = function(){
     tom = decom(inputNum);
     changeNum(tom);
     nnCount(tom);
+    calcul(tom)
 }
 
 
 var decom = function(a){
-    var tol = a.split("");
+    var tol = a.split(" ");
     return tol;
 }
 
 var nnCount = function(a){
+    count = 0;
     for(var i = 0; i < a.length; i++){
-        if(a[i] != 'string'){
+        if(typeof a[i] != 'string'){
             count++;
         }
     }
@@ -34,4 +37,20 @@ var changeNum = function(a){
         }
         
     }
+}
+
+var calcul = function(a){
+    total = a[0];
+    for(var i = 1; i < a.length; i++){
+        if(a[i] === "+"){
+            total = total + a[i + 1];
+        }else if(a[i] === "-"){
+            total = total - a[i + 1];
+        }else if(a[i] === "*"){
+            total = total * a[i + 1];
+        }else if(a[i] === "/"){
+            total = total / a[i + 1];
+        }
+    }
+    console.log(total);
 }
