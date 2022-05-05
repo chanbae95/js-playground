@@ -1,0 +1,13 @@
+table{
+    border: 1px solid black;
+}
+td > button{
+    width: 60px;
+    height: 60px;
+}
+
+#InputSpace{
+    font-size: 25px;
+    width: 252px;
+    height: 60px;
+}
